@@ -9,7 +9,7 @@ class Window(Frame):
     def __init__(self, master=None):
         Frame.__init__(self, master=None)
         self.master = master
-        self.animation = BestMates(self.master)
+        self.animation = ArmFlapper(self.master)
         self.start_button = Button(self.master, text="Start", command=self.animation.dance)
         self.kill_button = Button(self.master, text="END", command=self.destroy).pack()
         
@@ -111,7 +111,7 @@ class Animation(Canvas):
         self.print_costume(costume)
        
      
-class BestMates(Animation):
+class ArmFlapper(Animation):
     """
     Best mates dance from fortnight
     """
